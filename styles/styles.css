@@ -71,7 +71,7 @@
 }
 
 body {
-  display: none;
+  display: block; /* Temporarily changed from 'none' for debugging */
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);

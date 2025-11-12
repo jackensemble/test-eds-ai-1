@@ -31,7 +31,7 @@ main .cards .card:hover {
 main .cards .card-image {
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 320px;
   overflow: hidden;
 }
 
@@ -62,15 +62,15 @@ main .cards .card-image::after {
 /* Overlay heading on image */
 main .cards .card-image-text {
   position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
+  bottom: 2rem;
+  left: 1.75rem;
+  right: 1.75rem;
   z-index: 2;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2;
-  text-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+  text-shadow: 0 2px 6px rgb(0 0 0 / 50%);
 }
 
 /* Card body below the image */
@@ -83,58 +83,59 @@ main .cards .card-body {
 }
 
 main .cards .card-body h3 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
   font-family: var(--heading-font-family);
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-weight: 700;
   color: var(--text-color);
   text-transform: capitalize;
 }
 
 main .cards .card-body p {
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
   flex: 1;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.65;
   color: #333;
 }
 
-/* Links as bordered buttons */
+/* Links as filled buttons */
 main .cards .card-links {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  gap: 0.875rem;
+  margin-top: 0.5rem;
 }
 
 main .cards .card-links a {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: white;
-  color: #333;
+  padding: 0.875rem 1.75rem;
+  background: #222;
+  color: white;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
-  border: 2px solid #333;
-  border-radius: 4px;
+  font-size: 0.9375rem;
+  border: 2px solid #222;
+  border-radius: 3px;
   text-align: center;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
 }
 
 main .cards .card-links a:hover {
-  background: #333;
-  color: white;
+  background: #000;
+  border-color: #000;
+  transform: translateY(-1px);
 }
 
 /* Responsive: tablet and up */
 @media (width >= 768px) {
   main .cards .cards-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1.75rem;
   }
 
   main .cards .card-image {
-    height: 200px;
+    height: 280px;
   }
 }
 
@@ -142,14 +143,25 @@ main .cards .card-links a:hover {
 @media (width >= 1024px) {
   main .cards .cards-list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   main .cards .card-image {
-    height: 220px;
+    height: 340px;
   }
 
   main .cards .card-image-text {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    bottom: 2.5rem;
+    left: 2rem;
+    right: 2rem;
+  }
+
+  main .cards .card-body {
+    padding: 2rem 1.75rem;
+  }
+
+  main .cards .card-body h3 {
+    font-size: 1.5rem;
   }
 }

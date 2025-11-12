@@ -1,21 +1,36 @@
-/* Hero block - Coleman split layout style */
+/* Hero section - remove default container constraints */
+main .section:has(.hero) {
+  max-width: unset;
+  padding: 0;
+  margin: 0;
+}
+
+main .section:has(.hero) > div {
+  max-width: unset;
+}
+
+/* Hero block - Coleman split layout style - Full width */
 main .hero {
-  background: #333;
+  background: transparent;
   color: white;
+  max-width: unset;
 }
 
 main .hero .hero-row {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  max-width: unset;
 }
 
 /* Text content side */
 main .hero .hero-content {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 3rem 2rem;
-  background: #333;
+  background: rgb(53 72 86);
+  text-align: center;
 }
 
 main .hero .hero-text {
@@ -27,28 +42,60 @@ main .hero .hero-text p:has(a) {
   margin: 0.5rem 0;
 }
 
+/* Tent icon */
 main .hero .hero-text > p:first-child {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  line-height: 1;
+}
+
+/* Tagline - "TENT SEASON" */
+main .hero .hero-text > p:nth-of-type(2) {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  color: white;
+  opacity: 0.9;
+}
+
+/* Heading - "Here's to the nights" */
+main .hero .hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+  color: white;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Description paragraph */
+main .hero .hero-text > p:nth-of-type(3) {
   font-size: 1.125rem;
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0 0 2rem;
   color: white;
+  font-weight: 300;
 }
 
 main .hero .hero-text a {
   display: inline-block;
-  padding: 0.75rem 2rem;
-  background: white;
-  color: #333;
+  padding: 16px 40px;
+  background: rgb(240 235 226);
+  color: rgb(72 71 69);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 14px;
   border-radius: 4px;
+  border: none;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 main .hero .hero-text a:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
+  background: rgb(230 225 216);
+  transform: translateY(-1px);
 }
 
 /* Image side */
@@ -95,7 +142,11 @@ main .hero .hero-image img {
     min-height: auto;
   }
 
-  main .hero .hero-text > p:first-child {
+  main .hero .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  main .hero .hero-text > p:nth-of-type(3) {
     font-size: 1.25rem;
   }
 }
@@ -115,12 +166,26 @@ main .hero .hero-image img {
   }
 
   main .hero .hero-text > p:first-child {
+    font-size: 4rem;
+  }
+
+  main .hero .hero-text > p:nth-of-type(2) {
+    font-size: 1rem;
+  }
+
+  main .hero .hero-text h1 {
+    font-size: 3.75rem;
+    margin-bottom: 2rem;
+  }
+
+  main .hero .hero-text > p:nth-of-type(3) {
     font-size: 1.5rem;
+    line-height: 1.6;
     margin-bottom: 2.5rem;
   }
 
   main .hero .hero-text a {
-    padding: 0.875rem 2.5rem;
-    font-size: 1.0625rem;
+    padding: 16px 40px;
+    font-size: 14px;
   }
 }
